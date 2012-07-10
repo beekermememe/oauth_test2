@@ -1,0 +1,19 @@
+<% title "Doclists" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last Time Modified</th>
+  </tr>
+  <% for doclist in @doclists %>
+    <tr>
+      <td><%= doclist.name %></td>
+      <td><%= doclist.last_time_modified %></td>
+      <td><%= link_to "Show", doclist %></td>
+      <td><%= link_to "Edit", edit_doclist_path(doclist) %></td>
+      <td><%= link_to "Destroy", doclist, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Doclist", new_doclist_path %></p>

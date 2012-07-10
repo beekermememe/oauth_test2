@@ -1,0 +1,12 @@
+<%= form_for @doclist do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :last_time_modified %><br />
+    <%= f.datetime_select :last_time_modified %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

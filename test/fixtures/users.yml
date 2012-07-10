@@ -1,0 +1,15 @@
+one:
+  google_id: MyString
+  google_picture: MyString
+  name: MyString
+  google_email: MyString
+  google_first_name: MyString
+  google_last_name: MyString
+
+two:
+  google_id: MyString
+  google_picture: MyString
+  name: MyString
+  google_email: MyString
+  google_first_name: MyString
+  google_last_name: MyString

@@ -1,0 +1,16 @@
+<% title "Doclist" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @doclist.name %>
+</p>
+<p>
+  <strong>Last Time Modified:</strong>
+  <%= @doclist.last_time_modified %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_doclist_path(@doclist) %> |
+  <%= link_to "Destroy", @doclist, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", doclists_path %>
+</p>
