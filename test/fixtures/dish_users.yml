@@ -1,0 +1,19 @@
+one:
+  uuid: MyString
+  token: MyString
+  expires_at: 
+  expires: false
+  email: MyString
+  name: MyString
+  first_name: MyString
+  last_name: MyString
+
+two:
+  uuid: MyString
+  token: MyString
+  expires_at: 
+  expires: false
+  email: MyString
+  name: MyString
+  first_name: MyString
+  last_name: MyString

@@ -1,0 +1,40 @@
+<% title "Dish User" %>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @dish_user.uuid %>
+</p>
+<p>
+  <strong>Token:</strong>
+  <%= @dish_user.token %>
+</p>
+<p>
+  <strong>Expires At:</strong>
+  <%= @dish_user.expires_at %>
+</p>
+<p>
+  <strong>Expires:</strong>
+  <%= @dish_user.expires %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @dish_user.email %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @dish_user.name %>
+</p>
+<p>
+  <strong>First Name:</strong>
+  <%= @dish_user.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @dish_user.last_name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_dish_user_path(@dish_user) %> |
+  <%= link_to "Destroy", @dish_user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", dish_users_path %>
+</p>

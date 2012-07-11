@@ -26,6 +26,7 @@ gem 'activeadmin'
 gem "nifty-generators", :group => :development
 
 gem 'omniauth-google-oauth2'# , :path => "/Users/engineering/repos/omniauth-google-oauth2"
+
 gem "twitter-bootstrap-rails"
 
 # To use ActiveModel has_secure_password

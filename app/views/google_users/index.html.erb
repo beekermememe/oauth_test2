@@ -1,0 +1,31 @@
+<% title "Google Users" %>
+
+<table>
+  <tr>
+    <th>Uuid</th>
+    <th>Token</th>
+    <th>Expires At</th>
+    <th>Expires</th>
+    <th>Email</th>
+    <th>Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <% for google_user in @google_users %>
+    <tr>
+      <td><%= google_user.uuid %></td>
+      <td><%= google_user.token %></td>
+      <td><%= google_user.expires_at %></td>
+      <td><%= google_user.expires %></td>
+      <td><%= google_user.email %></td>
+      <td><%= google_user.name %></td>
+      <td><%= google_user.first_name %></td>
+      <td><%= google_user.last_name %></td>
+      <td><%= link_to "Show", google_user %></td>
+      <td><%= link_to "Edit", edit_google_user_path(google_user) %></td>
+      <td><%= link_to "Destroy", google_user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Google User", new_google_user_path %></p>

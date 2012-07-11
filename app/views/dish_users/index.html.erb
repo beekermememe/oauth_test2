@@ -1,0 +1,31 @@
+<% title "Dish Users" %>
+
+<table>
+  <tr>
+    <th>Uuid</th>
+    <th>Token</th>
+    <th>Expires At</th>
+    <th>Expires</th>
+    <th>Email</th>
+    <th>Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <% for dish_user in @dish_users %>
+    <tr>
+      <td><%= dish_user.uuid %></td>
+      <td><%= dish_user.token %></td>
+      <td><%= dish_user.expires_at %></td>
+      <td><%= dish_user.expires %></td>
+      <td><%= dish_user.email %></td>
+      <td><%= dish_user.name %></td>
+      <td><%= dish_user.first_name %></td>
+      <td><%= dish_user.last_name %></td>
+      <td><%= link_to "Show", dish_user %></td>
+      <td><%= link_to "Edit", edit_dish_user_path(dish_user) %></td>
+      <td><%= link_to "Destroy", dish_user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Dish User", new_dish_user_path %></p>

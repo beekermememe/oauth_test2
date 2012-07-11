@@ -1,4 +1,8 @@
 OauthTest::Application.routes.draw do
+  resources :dish_users
+
+  resources :google_users
+
   resources :users
 
   resources :doclists

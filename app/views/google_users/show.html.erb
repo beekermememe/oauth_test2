@@ -1,0 +1,40 @@
+<% title "Google User" %>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @google_user.uuid %>
+</p>
+<p>
+  <strong>Token:</strong>
+  <%= @google_user.token %>
+</p>
+<p>
+  <strong>Expires At:</strong>
+  <%= @google_user.expires_at %>
+</p>
+<p>
+  <strong>Expires:</strong>
+  <%= @google_user.expires %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @google_user.email %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @google_user.name %>
+</p>
+<p>
+  <strong>First Name:</strong>
+  <%= @google_user.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @google_user.last_name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_google_user_path(@google_user) %> |
+  <%= link_to "Destroy", @google_user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", google_users_path %>
+</p>
