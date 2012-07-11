@@ -64,6 +64,9 @@ OauthTest::Application.routes.draw do
 
   match 'auth/:provider/callback', :to => 'sessions#create'
   match 'auth/failure', :to => redirect('/')
+  match 'session/deauth', :to => 'sessions#deauth'
+  match 'session/destroy', :to => 'sessions#destroy'
+
   match 'signout', :to => 'sessions#destroy', :as => 'signout'
 
   # See how all your routes lay out with "rake routes"

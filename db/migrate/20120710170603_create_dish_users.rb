@@ -3,7 +3,7 @@ class CreateDishUsers < ActiveRecord::Migration
     create_table :dish_users do |t|
       t.string :uuid
       t.string :token
-      t.int :expires_at
+      t.integer :expires_at
       t.boolean :expires
       t.string :email
       t.string :name

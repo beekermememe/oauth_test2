@@ -1,28 +1,27 @@
 <% title "User" %>
 
 <p>
-  <strong>Google:</strong>
-  <%= @user.google_id %>
-</p>
-<p>
-  <strong>Google Picture:</strong>
-  <%= @user.google_picture %>
-</p>
-<p>
-  <strong>Name:</strong>
+  <strong>Name</strong>
   <%= @user.name %>
 </p>
+
 <p>
-  <strong>Google Email:</strong>
-  <%= @user.google_email %>
+  <strong>Google Name</strong>
+  <% if @user.google_user %>
+    <%= @user.google_user.name %>
+  <% end %>
 </p>
 <p>
-  <strong>Google First Name:</strong>
-  <%= @user.google_first_name %>
-</p>
+  <strong>Google Email</strong>
+  <% if @user.google_user %>
+    <%= @user.google_user.email %>
+  <% end %>
+  </p>
 <p>
-  <strong>Google Last Name:</strong>
-  <%= @user.google_last_name %>
+  <strong>Google Token</strong>
+  <% if @user.google_user %>
+    <%= @user.google_user.token %>
+  <% end %>
 </p>
 
 <p>

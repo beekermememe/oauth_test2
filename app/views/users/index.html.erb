@@ -2,21 +2,17 @@
 
 <table>
   <tr>
-    <th>Google</th>
-    <th>Google Picture</th>
     <th>Name</th>
+    <th>Google Token</th>
     <th>Google Email</th>
-    <th>Google First Name</th>
-    <th>Google Last Name</th>
+    <th>Google Name</th>
   </tr>
   <% for user in @users %>
     <tr>
-      <td><%= user.google_id %></td>
-      <td><%= user.google_picture %></td>
       <td><%= user.name %></td>
-      <td><%= user.google_email %></td>
-      <td><%= user.google_first_name %></td>
-      <td><%= user.google_last_name %></td>
+      <td><%= user.google_user ? user.google_user.token : "" %></td>
+      <td><%= user.google_user ? user.google_user.email : "" %></td>
+      <td><%= user.google_user ? user.google_user.name : "" %></td>
       <td><%= link_to "Show", user %></td>
       <td><%= link_to "Edit", edit_user_path(user) %></td>
       <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
